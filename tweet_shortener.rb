@@ -16,8 +16,9 @@ def word_substituter(tweet)
   wrking_grnd = tweet.split(" ")
   result = []
   wrking_grnd.collect do |wrd|
+
     if dictionary.has_key?(wrd.downcase)
-      nw_wrd = dictionary[wrd]
+      nw_wrd = dictionary[wrd.downcase]
       result +=[nw_wrd]
     else
       result +=[wrd]
